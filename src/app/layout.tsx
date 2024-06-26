@@ -28,6 +28,6 @@ export default function RootLayout({
 }
 
 export const metadata: Metadata = {
-  title: "Social Media App",
+  title: "AIME DEV",
   description: "Social media app built with Next.js",
 };

@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from "next/image";
+import Comments from "@/app/components/Comments";
 
 const Post = () => {
     const user = 'https://i.pinimg.com/736x/39/6d/39/396d392645180a426186aec7b7defaee.jpg'
@@ -31,14 +32,14 @@ const Post = () => {
             <div className={'flex items-start my-4 w-full justify-between text-sm'}>
                 {/*left*/}
                 <div className={'flex gap-2 md:gap-4 scale-90'}>
-                    <div className={'flex items-center p-2 gap-4 bg-slate-50 rounded-lg relative cursor-pointer'}>
+                    <div className={'flex items-center p-2 gap-4 bg-slate-50 rounded-lg relative'}>
                         <Image src={'/like.png'} alt={''} className={'object-cover cursor-pointer'} width={24}
                                height={24}/>
                         <span className={'text-black'}>|</span>
                         <span className={'text-black flex gap-2'}>78 <span
                             className={'hidden md:block'}>Likes</span></span>
                     </div>
-                    <div className={'flex items-center p-2 gap-4 bg-slate-50 rounded-lg relative cursor-pointer'}>
+                    <div className={'flex items-center p-2 gap-4 bg-slate-50 rounded-lg relative'}>
                         <Image src={'/comment.png'} alt={''} className={'object-contain size-6 cursor-pointer'}
                                width={24}
                                height={24}/>
@@ -46,17 +47,19 @@ const Post = () => {
                         <span className={'text-black flex gap-2'}>27 <span
                             className={'hidden md:block'}>Comments</span></span>
                     </div>
-                    <div className={'flex items-center p-2 gap-4 bg-slate-50 rounded-lg relative cursor-pointer'}>
-                        <Image src={'/share.png'} alt={''} className={'object-contain size-6 cursor-pointer'} width={24}
-                               height={24}/>
+                </div>
+                {/*right*/}
+                <div>
+                    <div className={'flex items-center p-2 gap-4 bg-slate-50 rounded-lg relative'}>
+                        <Image src={'/share.png'} alt={''} className={'object-contain size-4 cursor-pointer'} width={24}
+                               height={18}/>
                         <span className={'text-black'}>|</span>
                         <span className={'text-black flex gap-2'}>7 <span
                             className={'hidden md:block'}>Shares</span></span>
                     </div>
                 </div>
-                {/*right*/}
-                <div></div>
             </div>
+            <Comments/>
         </div>
     )
 }
