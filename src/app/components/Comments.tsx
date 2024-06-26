@@ -1,6 +1,5 @@
 import React from 'react'
 import Image from "next/image";
-import { Input } from "shadcn-ui"
 
 const Comments = () => {
     const user = 'https://i.pinimg.com/564x/00/a2/64/00a2641e55f8c68ee0d1eed61aa7000a.jpg'
@@ -9,7 +8,7 @@ const Comments = () => {
             {/*write*/}
             <div className={'flex gap-4 items-center'}>
                 <Image src={user} alt={''} className={'size-8 object-cover rounded-full overflow-clip'} width={16} height={16}/>
-                <Input type="text" placeholder='write a comment...' value={''} className={'p-2 flex-1 bg-slate-100 z-30 outline-none rounded-xl w-full'} />
+                <input type="text" placeholder='write a comment...' value={''} className={'p-2 flex-1 bg-slate-100 z-30 outline-none rounded-xl w-full'} />
                 <Image src={'/emoji.png'} alt={''} className={'size-4 cursor-pointer object-cover rounded-full overflow-clip'} width={16} height={16}/>
             </div>
             {/*comments*/}
